@@ -56,14 +56,32 @@ inquirer.prompt([
 
 
     const markdownContent = 
-    
-`#${answers.title}
-
-##Description
+`# ${answers.title} {#title} 
+## Description {#description}
 ${answers.description}
-##Table of Contents
-##Questions
-##Usage Instructions
+## Table of Contents {#toc}
+    - [Title](#title)
+    - [Description](#description)
+    - [Table of Contents](#toc)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions)
+## Installation {#installation}
+${answers.installation}
+## Usage {#usage}
+${answers.usage}
+## License {#license}
+${answers.license}
+## Contributing {#contributing}
+${answers.contribute}
+## Tests {#tests}
+${answers.test}
+## Questions {#questions}
+My GitHub username is ${answers.username}, and my profile is [HERE](https://www.github.com/${answers.username}).
+You may email me with additional questions here: <${answers.email}>
 `
     
     
