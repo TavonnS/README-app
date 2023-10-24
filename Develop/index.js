@@ -7,6 +7,7 @@ const answers = require('./questions');
 // TODO: Create an array of questions for user input
 const questions = require('./questions');
 
+/*
 // TODO: Create a function to write README file
 // function writeToFile(productREADME, markdownContent) {
 function writeToFile() {
@@ -18,7 +19,7 @@ fs.writeFile('../build/productREADME.md', markdownContent, err => {
     }
 });
 }
-
+*/
 // TODO: Create a function to initialize app
 function init() {
     questions();

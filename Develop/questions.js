@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const writeToFile = require('./utils');
 
 const questions =  () => {
 
@@ -55,14 +56,21 @@ inquirer.prompt([
 
 
     const markdownContent = 
-    `#${answers.title}
+    
+`#${answers.title}
 
-    ##Description
-    ${answers.description}
-    ##Table of Contents
-    ##Questions
-    ##Usage Instructions
-    `
+##Description
+${answers.description}
+##Table of Contents
+##Questions
+##Usage Instructions
+`
+    
+    
+    module.exports = markdownContent;
+    writeToFile(markdownContent);
+
+    
 } 
 );
 };
