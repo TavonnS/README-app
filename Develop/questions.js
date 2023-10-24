@@ -52,6 +52,8 @@ inquirer.prompt([
 ]
 )
 .then(answers => {
+
+
     const markdownContent = 
     `#${answers.title}
 
@@ -61,9 +63,8 @@ inquirer.prompt([
     ##Questions
     ##Usage Instructions
     `
-
-
-});
+} 
+);
 };
 
 module.exports = questions;
