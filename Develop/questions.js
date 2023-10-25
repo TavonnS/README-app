@@ -38,7 +38,7 @@ inquirer.prompt([
         type: 'list',
         name: 'license',
         message: 'Choose a license for your application from this list:',
-        choices: ['MIT', 'Microsoft Public License	', 'Mozilla Public License', 'Eclipse Public License', 'Academic Free License', 'Creative Commons']
+        choices: ['MIT', 'Microsoft Public License', 'Mozilla Public License', 'Eclipse Public License', 'Academic Free License', 'Creative Commons']
     },
     {
         type: 'input',
@@ -53,19 +53,19 @@ inquirer.prompt([
 ]
 )
 .then(answers => {
+    const badgeChoice = answers.license;
 
-
-    const markdownContent = `
-# ${answers.title}
+    const markdownContent = 
+`# ${answers.title}
 
 ## Description
 
 ${answers.description}
 
 ## Table of Contents
-- [Title](#${answers.title.toLowerCase()})
-- [Description](#description)
-- [Table of Contents](#table-of-contents)
+- [Title]
+- [Description]
+- [Table of Contents]
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
