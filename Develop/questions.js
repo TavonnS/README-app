@@ -56,14 +56,21 @@ inquirer.prompt([
     const badgeChoice = answers.license;
 
     function renderLicenseBadge(badgeChoice) {
-        if (badgeChoice !== "None") {
-          return `![GitHub license](https://img.shields.io/badge/license-${badgeChoice}-blue.svg)`;
-        }
+        if (badgeChoice === "MIT") {
+          return `![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)`;
+        } else if (badgeChoice === 'Microsoft Public License') {
+            return `![GitHub license](https://img.shields.io/badge/license-Microsoft%20Public%20License-yellow.svg)`;
+        } else if (badgeChoice === "Creative Commons") {
+            return `![Static Badge](https://img.shields.io/badge/license-Creative%20Commons-black.svg)`
+        } else if (badgeChoice === 'Eclipse Public License') {
+            return `![Static Badge](https://img.shields.io/badge/license-Eclipse%20Public%20License-purple.svg)`
+        } else if (badgeChoice === 'Academic Free License') {
+            return `![GitHub license](https://img.shields.io/badge/license-Academic%20Free%20License-green.svg)`
+        } else if (badgeChoice === 'Mozilla Public License') {
+            return `![GitHub license](https://img.shields.io/badge/license-Mozilla%20Public%20License-blue.svg)`
+        } else
         return "";
-      }
-
-
-
+      };
 
 
     const markdownContent = 
