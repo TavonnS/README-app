@@ -55,17 +55,30 @@ inquirer.prompt([
 .then(answers => {
     const badgeChoice = answers.license;
 
+    function renderLicenseBadge(badgeChoice) {
+        if (badgeChoice !== "None") {
+          return `![GitHub license](https://img.shields.io/badge/license-${badgeChoice}-blue.svg)`;
+        }
+        return "";
+      }
+
+
+
+
+
     const markdownContent = 
 `# ${answers.title}
 
 ## Description
 
+${renderLicenseBadge(badgeChoice)}
+
 ${answers.description}
 
 ## Table of Contents
-- [Title]
-- [Description]
-- [Table of Contents]
+- [Title](#${answers.title.toLowerCase()})
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
