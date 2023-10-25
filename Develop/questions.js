@@ -55,34 +55,48 @@ inquirer.prompt([
 .then(answers => {
 
 
-    const markdownContent = 
-`# ${answers.title} {#title} 
-## Description {#description}
+    const markdownContent = `
+# ${answers.title}
+
+## Description
+
 ${answers.description}
-## Table of Contents {#toc}
-    - [Title](#title)
-    - [Description](#description)
-    - [Table of Contents](#toc)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-## Installation {#installation}
+
+## Table of Contents
+- [Title](#${answers.title.toLowerCase()})
+- [Description](#description)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation  
+
 ${answers.installation}
-## Usage {#usage}
+
+## Usage  
+
 ${answers.usage}
-## License {#license}
+
+## License  
+
 ${answers.license}
-## Contributing {#contributing}
+
+## Contributing  
+
 ${answers.contribute}
-## Tests {#tests}
+
+## Tests  
+
 ${answers.test}
-## Questions {#questions}
+
+## Questions  
+
 My GitHub username is ${answers.username}, and my profile is [HERE](https://www.github.com/${answers.username}).
-You may email me with additional questions here: <${answers.email}>
-`
+You may email me with additional questions here: <${answers.email}>`
     
     
     module.exports = markdownContent;
