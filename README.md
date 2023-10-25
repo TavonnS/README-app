@@ -20,7 +20,7 @@ Prompts:
 Output:
 ![Output](./Assets/readme%20final%20screen.png)
 
-Here is the link to the video of use: [VIDEO]()
+Here is the link to the video of use: [VIDEO](https://drive.google.com/file/d/15p9hdTkeSQs95r1R25FdSAxC-r-P1ZL9/view)
 
 ## Credits
 The starter code used in this project can be found here: [LINK](https://github.com/coding-boot-camp/potential-enigma)
